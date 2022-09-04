@@ -1,0 +1,151 @@
+/* Start Goblal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+/* Small Devices */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Devices */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* End Goblal */
+
+body {
+    background-color: #192227;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .calc {
+    border-radius: 10px;
+    width: 300px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #607D8B;
+    padding: 10px;
+    box-shadow: inset 0px 0px 10px 0px #eee;
+    max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .container .calc {
+        height: 60vh;
+    }
+}
+
+.container .calc .screen {
+    width: 100%;
+    padding: 10px;
+    border-radius: inherit;
+    margin-bottom: 20px;
+    outline: none;
+    background: #000000;
+    color: #0f0;
+    /* height: -webkit-fill-available; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.container .calc .screen::-webkit-scrollbar {
+    background: #555;
+    height: 5px;
+}
+
+.container .calc .screen::-webkit-scrollbar-thumb {
+    background: #009688
+}
+
+.container .calc .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    color: #eee;
+    max-width: 100%;
+    height: -webkit-fill-available;
+    width: 100%;
+}
+
+.container .calc .box .buttons,
+.container .calc .box .operation {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    gap: 5px;
+}
+
+.container .calc .box>div>div {
+    border-radius: 10px;
+    background: #009688;
+    padding: 5px;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    cursor: pointer;
+    border: 3px solid #0005;
+}
+
+.container .calc .box .operation {
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+}
+
+.container .calc .box .operation>div {
+    background: #E91E63;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+#equal {
+    grid-column: span 2;
+}
+
+.box>div>div:hover {
+    background-color: #0ff !important;
+    color: #000;
+}
+
+audio {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+}
