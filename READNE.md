@@ -13,9 +13,9 @@ Sample Calculator App
     change Design
     
 ### Links:- 
-   - **[X-O-Game Version 1](https://keroloslotfy.github.io/calculator/)**
-   - **[X-O-Game Version 2](https://keroloslotfy.github.io/calculator/v2)**
-   - **[X-O-Game Version 3](https://keroloslotfy.github.io/calculator/v3)**
+   - **[Calculator Version 1](https://keroloslotfy.github.io/calculator/)**
+   - **[Calculatore Version 2](https://keroloslotfy.github.io/calculator/v2)**
+   - **[Calculator Version 3](https://keroloslotfy.github.io/calculator/v3)**
 
 ### Used Lang:-
  - HTML
