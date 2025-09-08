@@ -4,6 +4,10 @@
 
 Sample Calculator App
 
+## Screenshot:-
+
+![Calculator Screenshot](media/Screenshot.JPG)
+
 ## Links:-
 
 - **[Calculator](https://keroloslotfy.github.io/calculator/)**
