@@ -1,9 +1,10 @@
-/* Start Goblal */
+/* Start Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
+    user-select: none;
 }
 
 /* Small Devices */
@@ -32,7 +33,7 @@ a {
     text-decoration: none;
 }
 
-/* End Goblal */
+/* End Global */
 
 body {
     background-color: #192227;
@@ -55,33 +56,28 @@ body {
 .container .calc {
     border-radius: 10px;
     width: 300px;
-    height: 50vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #607D8B;
-    padding: 10px;
-    box-shadow: inset 0px 0px 10px 0px #eee;
+    padding: 20px 10px 20px 10px;
+    box-shadow: inset 0px 0px 10px 0px #000000;
     max-width: 100%;
 }
 
-@media (max-width: 1200px) {
-    .container .calc {
-        height: 60vh;
-    }
-}
 
 .container .calc .screen {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-radius: inherit;
     margin-bottom: 20px;
     outline: none;
     background: #000000;
     color: #0f0;
-    /* height: -webkit-fill-available; */
     overflow-x: scroll;
     overflow-y: hidden;
+    font-size: 30px;
 }
 
 .container .calc .screen::-webkit-scrollbar {
@@ -99,7 +95,6 @@ body {
     gap: 10px;
     color: #eee;
     max-width: 100%;
-    height: -webkit-fill-available;
     width: 100%;
 }
 
@@ -108,13 +103,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(50px, 1fr));
     gap: 5px;
+    text-align: center;
 }
 
 .container .calc .box>div>div {
     border-radius: 10px;
     background: #009688;
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -149,3 +145,4 @@ audio {
     position: absolute;
     top: 0px;
 }
+
