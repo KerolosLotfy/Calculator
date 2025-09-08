@@ -35,8 +35,36 @@ a {
 
 /* End Global */
 
+/* Theme Variables */
+:root {
+    --bg-body: #192227;
+    --calc-bg: #607D8B;
+    --screen-bg: #000000;
+    --screen-text: #0f0;
+    --text-color: #eee;
+    --button-bg: #009688;
+    --op-button-bg: #E91E63;
+    --button-border: #0005;
+    --hover-bg: #0ff;
+    --hover-text: #000;
+    --theme-border: #ffffff;
+}
+
+body.light {
+    --bg-body: #476091;
+    --calc-bg: #00a4c5;
+    --screen-bg: rgb(0, 0, 0);
+    --screen-text: #00ff26;
+    --text-color: #1b1f24;
+    --button-bg: #e8f5ff;
+    --op-button-bg: #E91E63;
+    --button-border: #0001;
+    --hover-bg: #0d6efd;
+    --hover-text: #ffffff;
+    --theme-border: #000;
+}
 body {
-    background-color: #192227;
+    background-color: var(--bg-body);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,11 +74,14 @@ body {
 }
 
 .container {
-    margin: auto;
     max-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+        flex-direction: column;
     padding: 10px;
+    width: 100vw;
+        height: 100vh;
 }
 
 .container .calc {
@@ -60,10 +91,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #607D8B;
+    background: var(--calc-bg);
     padding: 20px 10px 20px 10px;
     box-shadow: inset 0px 0px 10px 0px #000000;
     max-width: 100%;
+    margin: auto;
 }
 
 
@@ -73,8 +105,8 @@ body {
     border-radius: inherit;
     margin-bottom: 20px;
     outline: none;
-    background: #000000;
-    color: #0f0;
+    background: var(--screen-bg);
+        color: var(--screen-text);
     overflow-x: scroll;
     overflow-y: hidden;
     font-size: 30px;
@@ -93,7 +125,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    color: #eee;
+    color: var(--text-color);
     max-width: 100%;
     width: 100%;
 }
@@ -108,7 +140,7 @@ body {
 
 .container .calc .box>div>div {
     border-radius: 10px;
-    background: #009688;
+    background: var(--button-bg);
     padding: 5px;
     font-size: 15px;
     justify-content: center;
@@ -116,7 +148,7 @@ body {
     align-items: center;
     font-weight: 800;
     cursor: pointer;
-    border: 3px solid #0005;
+    border: 3px solid var(--button-border);
 }
 
 .container .calc .box .operation {
@@ -124,10 +156,10 @@ body {
 }
 
 .container .calc .box .operation>div {
-    background: #E91E63;
+    background: var(--op-button-bg);
 }
 
-#zero {
+.zero {
     grid-column: span 2;
 }
 
@@ -136,8 +168,8 @@ body {
 }
 
 .box>div>div:hover {
-    background-color: #0ff !important;
-    color: #000;
+    background-color: var(--hover-bg) !important;
+        color: var(--hover-text);
 }
 
 audio {
@@ -146,3 +178,46 @@ audio {
     top: 0px;
 }
 
+
+/* Start Theme */
+.theme-toggle {
+    position: relative;
+    font-size: 10px;
+    cursor: pointer;
+    border: 1px solid var(--theme-border);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
+
+.theme-toggle .moon {
+    color: #000;
+}
+
+.theme-toggle .circle {
+    color: var(--op-button-bg);
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.25s ease, transform 0.25s ease;
+    font-size: 25px;
+}
+
+.theme-toggle .sun {
+    color: #fff;
+}
+
+/* Slide the circle to the right in light theme */
+body.light .theme-toggle .circle {
+    left: calc(100% - 31px);
+}
+
+/* End Theme */

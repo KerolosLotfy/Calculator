@@ -1,6 +1,19 @@
 const screen = document.querySelector(".screen");
 const buttons = document.querySelectorAll(".box > div > div");
 const equalButton = document.getElementById("equal");
+const themeToggle = document.querySelector(".theme-toggle");
+
+// Initialize theme from localStorage
+(() => {
+  try {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light");
+    }
+  } catch (_) {
+    // ignore storage errors
+  }
+})();
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -53,3 +66,15 @@ document.addEventListener("keydown", (event) => {
     equalButton.click();
   }
 });
+
+// Theme toggle handling
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isLight = document.body.classList.toggle("light");
+    try {
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    } catch (_) {
+      // ignore storage errors
+    }
+  });
+}
