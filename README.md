@@ -6,11 +6,14 @@ Sample Calculator App
 
 ## Screenshot:-
 
-![Calculator Screenshot](media/Screenshot.JPG)
+<div style="display: flex; gap: 10px;">
+  <img src="media/Screen%20Shot%202025-09-09%20at%2006.07.06.png" alt="Calculator Screenshot" style="width: 50%; height: auto;">
+  <img src="media/Screen%20Shot%202025-09-09%20at%2006.07.11.png" alt="Calculator Screenshot" style="width: 50%; height: auto;">
+</div>
 
 ## Links:-
 
-- **[Calculator](https://keroloslotfy.github.io/calculator/)**
+- **[Calculator](https://keroloslotfy.github.io/Calculator/)**
 
 ## Used Lang:-
 
